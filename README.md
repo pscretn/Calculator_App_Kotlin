@@ -18,7 +18,7 @@ Here we are going to see how to make a simple calculator app in kotlin using and
  You can see screen as shown above after build <br><br> 
   ![](/images/cal10.png) <br><br>
  * Open colors.xml by `Android` >> `values` >> `colors.xml` , Double click on colors.xml
- * Make it blank . Copy the code below 
+ * Make it blank . Copy the code below <br><br>
  ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
@@ -37,7 +37,8 @@ Here we are going to see how to make a simple calculator app in kotlin using and
 ```
 <br><br>
 * Paste it in colors.xml file
-* Click on Sync Project with Gradle Files  ![](/images/cal11.png)
+* Click on Sync Project with Gradle Files  ![](/images/cal12.png)
+* 
 
 
  
