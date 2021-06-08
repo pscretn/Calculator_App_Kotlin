@@ -77,7 +77,7 @@ Here we are going to see how to make a simple calculator app in kotlin using and
 </layer-list>
 ```
 <br><br>
-* Paste it in themes.xml file
+* Paste it in splash_screen.xml file
 * Click on Sync Project with Gradle Files  ![](/images/cal12.png)<br><br>
 ![](/images/cal11.png)<br><br>
 * Open styles.xml by `Android` >> `values` >> `styles.xml` , Double click on style.xml
@@ -96,7 +96,7 @@ Here we are going to see how to make a simple calculator app in kotlin using and
 <br><br>
 * Paste it in themes.xml file
 * Click on Sync Project with Gradle Files  ![](/images/cal12.png)<br><br>
-![](/images/cal11.png)<br><br>
+![](/images/cal6.png)<br><br>
 * Open activity_main.xml by `Android` >> `layout` >> `activity_main.xml` , Double click on activity_main.xml
 * Make it blank . Copy the code below <br><br>
 ```xml
@@ -317,7 +317,6 @@ Here we are going to see how to make a simple calculator app in kotlin using and
         </TableRow>
     </TableLayout>
 </LinearLayout>
-```
 ```
 <br><br>
 * Paste it in activity_main.xml file
