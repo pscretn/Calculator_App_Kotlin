@@ -470,7 +470,7 @@ class MainActivity : AppCompatActivity() {
 ### Test App
 Now you can test app on virtual device or your phone <br><br>
  ![](/images/cal21.png)<br><br>
-* Click on `Run` >> `Run 'app'`
+* Click on `Run` >> `Run 'app'`<br>
 if any error occured while testing , recheck everything and retest app
 ### Build Apk
 After Successful test we can build our app<br><br>
