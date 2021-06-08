@@ -93,3 +93,348 @@ Here we are going to see how to make a simple calculator app in kotlin using and
     </style>
 </resources>
 ```
+<br><br>
+* Paste it in themes.xml file
+* Click on Sync Project with Gradle Files  ![](/images/cal12.png)<br><br>
+![](/images/cal11.png)<br><br>
+* Open activity_main.xml by `Android` >> `layout` >> `activity_main.xml` , Double click on activity_main.xml
+* Make it blank . Copy the code below <br><br>
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/black"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            tools:text="5+10-3" />
+
+        <TextView
+            android:id="@+id/output"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textColor="@color/neon_green"
+            android:textSize="50sp"
+            tools:text="12" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <TableRow>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_clear"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="Del"
+                android:textColor="@color/red" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_bracket_left"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="("
+                android:textColor="@color/orange" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_bracket_right"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text=")"
+                android:textColor="@color/orange" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_division"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="÷"
+                android:textColor="@color/orange" />
+
+
+        </TableRow>
+
+        <TableRow>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_7"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="7" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_8"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="8" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_9"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="9" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_multiply"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="×"
+                android:textColor="@color/orange" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_4"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="4" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_5"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="5" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_6"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="6" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_subtraction"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="—"
+                android:textColor="@color/orange" />
+
+
+        </TableRow>
+
+        <TableRow>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_1"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="1" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_2"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_3"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="3" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_addition"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="+"
+                android:textColor="@color/orange" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_percent"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="%" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_0"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="0" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_dot"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:text="." />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_equals"
+                style="@style/Button_Style"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:background="@color/orange"
+                android:text="="
+                android:textColor="@color/white" />
+
+
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
+```
+```
+<br><br>
+* Paste it in activity_main.xml file
+* Click on Sync Project with Gradle Files  ![](/images/cal12.png)<br><br>
+![](/images/cal9.png)<br><br>
+* Open activity_main.xml by `Android` >> `java` >> `com.pscretn.calc` >> `MainActivity.kt` , Double click on MainActivity.kt
+* Make it blank . Copy the code below <br><br>
+```kotlin
+package com.pscretn.calc
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import androidx.core.content.ContextCompat
+import kotlinx.android.synthetic.main.activity_main.*
+import org.mariuszgromada.math.mxparser.Expression
+import java.text.DecimalFormat
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setTheme(R.style.Theme_Calc)
+        setContentView(R.layout.activity_main)
+
+        button_clear.setOnClickListener {
+            input.text = ""
+            output.text = ""
+        }
+
+        button_bracket_left.setOnClickListener {
+            input.text = addToInputText("(")
+        }
+        button_bracket_right.setOnClickListener {
+            input.text = addToInputText(")")
+        }
+        button_0.setOnClickListener {
+            input.text = addToInputText("0")
+        }
+        button_1.setOnClickListener {
+            input.text = addToInputText("1")
+        }
+        button_2.setOnClickListener {
+            input.text = addToInputText("2")
+        }
+        button_3.setOnClickListener {
+            input.text = addToInputText("3")
+        }
+        button_4.setOnClickListener {
+            input.text = addToInputText("4")
+        }
+        button_5.setOnClickListener {
+            input.text = addToInputText("5")
+        }
+        button_6.setOnClickListener {
+            input.text = addToInputText("6")
+        }
+        button_7.setOnClickListener {
+            input.text = addToInputText("7")
+        }
+        button_8.setOnClickListener {
+            input.text = addToInputText("8")
+        }
+        button_9.setOnClickListener {
+            input.text = addToInputText("9")
+        }
+        button_dot.setOnClickListener {
+            input.text = addToInputText(".")
+        }
+        button_division.setOnClickListener {
+            input.text = addToInputText("÷") // ALT + 0247
+        }
+        button_multiply.setOnClickListener {
+            input.text = addToInputText("×") // ALT + 0215
+        }
+        button_subtraction.setOnClickListener {
+            input.text = addToInputText("-")
+        }
+        button_addition.setOnClickListener {
+            input.text = addToInputText("+")
+        }
+
+        button_equals.setOnClickListener {
+            showResult()
+        }
+        button_percent.setOnClickListener {
+            input.text = addToInputText("%")
+        }
+    }
+
+    private fun addToInputText(buttonValue: String): String {
+        return "${input.text}$buttonValue"
+    }
+
+    private fun getInputExpression(): String {
+        var expression = input.text.replace(Regex("÷"), "/")
+        expression = expression.replace(Regex("×"), "*")
+        return expression
+    }
+
+    private fun showResult() {
+        try {
+            val expression = getInputExpression()
+            val result = Expression(expression).calculate()
+            if (result.isNaN()) {
+                // Show Error Message
+                output.text = "Error"
+                output.setTextColor(ContextCompat.getColor(this, R.color.red))
+            } else {
+                // Show Result
+                output.text = DecimalFormat("0.######").format(result).toString()
+                output.setTextColor(ContextCompat.getColor(this, R.color.neon_green))
+            }
+        } catch (e: Exception) {
+            // Show Error Message
+            output.text = "Error"
+            output.setTextColor(ContextCompat.getColor(this, R.color.red))
+        }
+    }
+}
+```
+* Paste it in Main_Activity.kt file
+* Click on Sync Project with Gradle Files  ![](/images/cal12.png)<br><br>
