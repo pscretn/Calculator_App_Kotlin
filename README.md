@@ -475,5 +475,5 @@ if any error occured while testing , recheck everything and retest app
 ### Build Apk
 After Successful test we can build our app<br><br>
  ![](/images/cal20.png)<br><br>
-* Click on `Build` >> `Build Bundle(s) / APK(s)` >> `Build APK(s)`<br>
-Now we are done with everything
+* Click on `Build` >> `Build Bundle(s) / APK(s)` >> `Build APK(s)`<br><br>
+Now we are done with everything and we have successfully build an android  calculator application in kotlin
