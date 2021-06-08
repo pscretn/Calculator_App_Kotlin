@@ -69,7 +69,7 @@ Here we are going to see how to make a simple calculator app in kotlin using and
 ![](/images/cal8.png)<br><br>
 * Open splash_screen.xml by `Android` >> `drawable` >> `splash_screen.xml` , Double click on splash_screen.xml
 * Make it blank . Copy the code below <br><br>
- ```xml
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 <item android:drawable="@color/white"/>
@@ -100,8 +100,8 @@ Here we are going to see how to make a simple calculator app in kotlin using and
 ![](/images/cal6.png)<br><br>
 * Open styles.xml by `Android` >> `values` >> `styles.xml` , Double click on style.xml
 * Make it blank . Copy the code below <br><br>
-  ```xml
-  <?xml version="1.0" encoding="utf-8"?>
+```xml
+ <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
