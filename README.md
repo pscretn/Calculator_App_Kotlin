@@ -465,5 +465,14 @@ class MainActivity : AppCompatActivity() {
  * Select Path: of image (You can get logo from images in this repository)
  * Adjust Size and Opacity if required
  * Click `Next`<br><br>
-  ![](/images/cal18.png)<br><br>
- * Click `Finish`<br><br>
+  ![](/images/cal19.png)<br><br>
+* Click `Finish`<br><br>
+### Test App
+Now you can test app on virtual device or your phone <br><br>
+ ![](/images/cal21.png)<br><br>
+* Click on `Run` >> `Run 'app'`
+if any error occured while testing , recheck everything and retest app
+### Build Apk
+After Successful test we can build our app<br><br>
+ ![](/images/cal20.png)<br><br>
+* Click on `Build` >> `Build Bundle(s) / APK(s)` >> `Build APK(s)`
