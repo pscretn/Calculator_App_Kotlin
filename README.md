@@ -323,7 +323,7 @@ Here we are going to see how to make a simple calculator app in kotlin using and
 * Click on Sync Project with Gradle Files  ![](/images/cal12.png)<br><br>
 ![](/images/cal9.png)<br><br>
 * Open activity_main.xml by `Android` >> `java` >> `com.pscretn.calc` >> `MainActivity.kt` , Double click on MainActivity.kt
-* Make it blank . Copy the code below <br><br>
+* Make it blank , excluding package com......(in my case `package com.pscretn.calc`) . Copy the code below <br><br>
 ```kotlin
 package com.pscretn.calc
 import androidx.appcompat.app.AppCompatActivity
@@ -437,3 +437,33 @@ class MainActivity : AppCompatActivity() {
 ```
 * Paste it in Main_Activity.kt file
 * Click on Sync Project with Gradle Files  ![](/images/cal12.png)<br><br>
+ ## Adding Icon for app
+ Now we are going to add a icon for our app for that <br><br>
+ ![](/images/cal13.png)<br><br>
+ * Select `Android` >> Click on `mipmap`
+ * Right click on `mipmap` >> `New` >> Image Asset<br><br>
+  ![](/images/cal14.png)<br><br>
+ * Change Icon Type: `Launcher Icons(Adaptive and Legacy)
+ * Select Foreground Layer
+ * Set Asset Type: to `Image`
+ * Select Path: of image (You can get icon from images in this repository)
+ * Set Trim: to `Yes` and Resize it 
+ * Click `Next`<br><br>
+ ![](/images/cal15.png)<br><br>
+ * Select Background Layer
+ * Set Asset Type: to `Color` and Change Value of Color
+ * Click `Next`<br><br>
+ ![](/images/cal16.png)<br><br>
+ * Click `Finish`<br><br>
+ ## Setting Splash Screen Logo
+ Now we are going  set up a splash screen that will show up while opening application<br><br>
+  ![](/images/cal17.png)<br><br>
+ * Select `Android` >> Click on `drawable`
+ * Right click on `drawable` >> `New` >> `Vector Asset`<br><br>
+  ![](/images/cal18.png)<br><br>
+ * Set Asset Type: to `Local file(SVG,PSD)`
+ * Select Path: of image (You can get logo from images in this repository)
+ * Adjust Size and Opacity if required
+ * Click `Next`<br><br>
+  ![](/images/cal18.png)<br><br>
+ * Click `Finish`<br><br>
